@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCFFFD"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtnota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Elementos"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/divider2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rclPaises"
+        android:layout_width="419dp"
+        android:layout_height="616dp"
+        android:background="@color/trans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#1D48B5"
+        app:layout_constraintBottom_toTopOf="@+id/rclPaises"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtnota" />
+</androidx.constraintlayout.widget.ConstraintLayout>
